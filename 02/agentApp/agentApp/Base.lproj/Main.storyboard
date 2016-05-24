@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hum-vB-GVn">
+                                <rect key="frame" x="40" y="40" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-wY-73b">
+                                <rect key="frame" x="263" y="170" width="75" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="authenticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Azz-cN-d6r"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2O-UR-Ryv">
+                                <rect key="frame" x="40" y="97" width="520" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uq-6t-XQY">
+                                <rect key="frame" x="353" y="242" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TIYLogo" translatesAutoresizingMaskIntoConstraints="NO" id="SGt-c7-99L">
+                                <rect key="frame" x="105" y="307" width="390" height="212"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Uq-6t-XQY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="222" id="DCI-yN-HFw"/>
+                            <constraint firstItem="CL2-wY-73b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="KWJ-dK-fev"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hum-vB-GVn" secondAttribute="trailing" constant="20" id="O2R-eb-22G"/>
+                            <constraint firstItem="p2O-UR-Ryv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="PDV-Z5-Hhg"/>
+                            <constraint firstItem="p2O-UR-Ryv" firstAttribute="width" secondItem="hum-vB-GVn" secondAttribute="width" id="RF4-v9-ucl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p2O-UR-Ryv" secondAttribute="trailing" constant="20" id="d9v-Vq-ak3"/>
+                            <constraint firstItem="SGt-c7-99L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="287" id="h5s-92-r4x"/>
+                            <constraint firstItem="SGt-c7-99L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i6Z-OB-Lpg"/>
+                            <constraint firstItem="p2O-UR-Ryv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="jQA-eD-v8s"/>
+                            <constraint firstItem="CL2-wY-73b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jdx-JH-4bG"/>
+                            <constraint firstItem="SGt-c7-99L" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="jyT-KI-jUe"/>
+                            <constraint firstItem="hum-vB-GVn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lzd-BK-Q1G"/>
+                            <constraint firstItem="hum-vB-GVn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="m5a-sl-kln"/>
+                            <constraint firstItem="7Uq-6t-XQY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y2R-wJ-eCS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authenticateButton" destination="CL2-wY-73b" id="k3K-G5-Z2d"/>
+                        <outlet property="greetingLabel" destination="7Uq-6t-XQY" id="NVq-3D-iY3"/>
+                        <outlet property="passwordTextField" destination="p2O-UR-Ryv" id="xMp-uf-9ih"/>
+                        <outlet property="usernameTextField" destination="hum-vB-GVn" id="y6L-fu-AfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TIYLogo" width="240" height="212"/>
+    </resources>
+</document>
