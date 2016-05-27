@@ -79,11 +79,17 @@
     }
     
     self.milageLabel.text = [NSString stringWithFormat:@"%i", milesPerHour];
+
+    [self performSegueWithIdentifier:@"gigaSegue" sender:self];
     
     
 }
-// Here I am trying to get the dateLabel equal the lastTimeDepartedLabel so that they can change simultaneously
-//[dateLabel = lastTimeDepartedLabel];
+
+//if(milesPerHour == 88) {
+
+    
+//}
+
 
 
 
