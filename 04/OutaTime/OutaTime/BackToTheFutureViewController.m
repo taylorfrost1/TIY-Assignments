@@ -19,13 +19,6 @@
    
 }
 
-- (IBAction)backToTimeTravelButton:(UIButton *)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-
 
 
 @end

@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.dateTextField setValue:[UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0] forKeyPath:@"_placeholderLabel.textColor"];
+    
     
     self.formatter = [[NSDateFormatter alloc] init];
     
@@ -76,21 +78,20 @@
     
     if(milesPerHour == 88){
         [self.timer invalidate];
+        [self performSegueWithIdentifier:@"gigaSegue" sender:self];
     }
     
     self.milageLabel.text = [NSString stringWithFormat:@"%i", milesPerHour];
-
-    [self performSegueWithIdentifier:@"gigaSegue" sender:self];
-    
-    
 }
 
-//if(milesPerHour == 88) {
+- (IBAction)unwindSegue:(UIStoryboardSegue *)segue {
+    NSLog(@"unwindSegue");
+}
 
-    
-//}
 
-
+-(void) reset {
+    NSLog(@"Reset");
+}
 
 
 @end
