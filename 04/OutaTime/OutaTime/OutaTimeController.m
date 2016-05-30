@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self.dateTextField setValue:[UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0] forKeyPath:@"_placeholderLabel.textColor"];
     
     
@@ -67,8 +68,6 @@
     float speed = 0.06;
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:speed target:self selector:@selector (updateMiles) userInfo:nil repeats:YES];
-    
-    
 
 }
 
@@ -94,4 +93,5 @@
 }
 
 
+                    
 @end

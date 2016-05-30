@@ -17,6 +17,8 @@
 		349A1AB71CF77A0C00DBD45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349A1AB51CF77A0C00DBD45F /* LaunchScreen.storyboard */; };
 		349A1AC31CF7809300DBD45F /* BackToTheFutureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 349A1AC21CF7809300DBD45F /* BackToTheFutureViewController.m */; };
 		349A1AC51CF78BBD00DBD45F /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349A1AC41CF78BBD00DBD45F /* digital-7.ttf */; };
+		34B4D4DD1CFCB6CD00305AFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B4D4DC1CFCB6CD00305AFC /* AVFoundation.framework */; };
+		34B4D4DF1CFCB79F00305AFC /* 01 I See Fire (cover) Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34B4D4DE1CFCB79F00305AFC /* 01 I See Fire (cover) Ed Sheeran.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		349A1AC11CF7809300DBD45F /* BackToTheFutureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackToTheFutureViewController.h; sourceTree = "<group>"; };
 		349A1AC21CF7809300DBD45F /* BackToTheFutureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackToTheFutureViewController.m; sourceTree = "<group>"; };
 		349A1AC41CF78BBD00DBD45F /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		34B4D4DC1CFCB6CD00305AFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		34B4D4DE1CFCB79F00305AFC /* 01 I See Fire (cover) Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 I See Fire (cover) Ed Sheeran.mp3"; sourceTree = "<group>"; };
+		34B4D4E01CFCB81000305AFC /* Music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Music.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34B4D4DD1CFCB6CD00305AFC /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,7 @@
 		349A1A9B1CF77A0C00DBD45F = {
 			isa = PBXGroup;
 			children = (
+				34B4D4DC1CFCB6CD00305AFC /* AVFoundation.framework */,
 				349A1AA61CF77A0C00DBD45F /* OutaTime */,
 				349A1AA51CF77A0C00DBD45F /* Products */,
 			);
@@ -76,6 +83,8 @@
 				348FB6521CF8E726008D7328 /* 2.jpg */,
 				348FB6501CF8E518008D7328 /* futurecitytoorobertdbrown.jpg */,
 				349A1AC41CF78BBD00DBD45F /* digital-7.ttf */,
+				34B4D4DE1CFCB79F00305AFC /* 01 I See Fire (cover) Ed Sheeran.mp3 */,
+				34B4D4E01CFCB81000305AFC /* Music.m4a */,
 				349A1AB01CF77A0C00DBD45F /* Main.storyboard */,
 				349A1AB31CF77A0C00DBD45F /* Assets.xcassets */,
 				349A1AB51CF77A0C00DBD45F /* LaunchScreen.storyboard */,
@@ -152,6 +161,7 @@
 			files = (
 				348FB6531CF8E726008D7328 /* 2.jpg in Resources */,
 				349A1AB71CF77A0C00DBD45F /* LaunchScreen.storyboard in Resources */,
+				34B4D4DF1CFCB79F00305AFC /* 01 I See Fire (cover) Ed Sheeran.mp3 in Resources */,
 				349A1AB41CF77A0C00DBD45F /* Assets.xcassets in Resources */,
 				349A1AB21CF77A0C00DBD45F /* Main.storyboard in Resources */,
 				348FB6511CF8E518008D7328 /* futurecitytoorobertdbrown.jpg in Resources */,
