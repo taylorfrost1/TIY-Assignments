@@ -24,24 +24,24 @@
     
     self.charactersArray = [[NSMutableArray alloc] init];
     
-    StarWarsCharacter *luke = [[StarWarsCharacter alloc] initWithName:@"Luke Skywalker" spaceship:@"X-Wing"];
-    [self.charactersArray addObject:luke];
+    StarWarsCharacter *l = [[StarWarsCharacter alloc] init];
+    l.name =@"Luke Skywalker";
+    l.spaceship =@"X-Wing";
+    
+    [self.charactersArray addObject:l];
     
     StarWarsCharacter *leia = [[StarWarsCharacter alloc] init];
-    
     leia.name = @"Princess Leia";
-    
     leia.spaceship = @"X-Wing Fighter";
     
-    [self.charactersArray addObject: @"leia"];
+    [self.charactersArray addObject:leia];
     
     StarWarsCharacter *anakin = [[StarWarsCharacter alloc] init];
     
     anakin.name = @"Anakin Skywalker";
-    
     anakin.spaceship = @"Tie Fighter";
     
-    [self.charactersArray addObject: @"anakin"];
+    [self.charactersArray addObject:anakin];
     
     StarWarsCharacter *kenobi = [[StarWarsCharacter alloc] init];
     
@@ -49,7 +49,7 @@
     
     kenobi.spaceship = @"X-Wing Fighter";
     
-    [self.charactersArray addObject: @"kenobi"];
+    [self.charactersArray addObject:kenobi];
     
     StarWarsCharacter *yoda = [[StarWarsCharacter alloc] init];
     
@@ -57,7 +57,7 @@
     
     yoda.spaceship = @"X-Wing Fighter";
     
-    [self.charactersArray addObject: @"yoda"];
+    [self.charactersArray addObject:yoda];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -70,11 +70,11 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    self.currentCharacter = [self.charactersArray objectAtIndex:indexPath.row];
+    StarWarsCharacter *theCharacter = [self.charactersArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = self.currentCharacter.name;
+    cell.textLabel.text = theCharacter.name;
     
-        return cell;
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -99,7 +99,7 @@
         
         profileController.theCharacter = self.currentCharacter;
         
-        [self performSegueWithIdentifier:@"ProfileSegue" sender:nil];
+
         
         
         
