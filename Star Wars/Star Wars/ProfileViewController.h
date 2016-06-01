@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StarWarsCharacter.h"
 
 @interface ProfileViewController : UIViewController
+
+@property (strong, nonatomic) StarWarsCharacter *theCharacter;
 
 @end

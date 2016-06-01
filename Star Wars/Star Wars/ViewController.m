@@ -11,8 +11,7 @@
 #import "ProfileViewController.h"
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
-
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *charactersArray;
 @property (strong, nonatomic) StarWarsCharacter *currentCharacter;
 
@@ -25,13 +24,8 @@
     
     self.charactersArray = [[NSMutableArray alloc] init];
     
-    StarWarsCharacter *vader = [[StarWarsCharacter alloc] init];
-    
-    vader.name = @"Darth Vader";
-    
-    vader.spaceship = @"tiefighter";
-    
-    [self.charactersArray addObject: @"vader"];
+    StarWarsCharacter *luke = [[StarWarsCharacter alloc] initWithName:@"Luke Skywalker" spaceship:@"X-Wing"];
+    [self.charactersArray addObject:luke];
     
     StarWarsCharacter *leia = [[StarWarsCharacter alloc] init];
     
@@ -78,7 +72,7 @@
     
     self.currentCharacter = [self.charactersArray objectAtIndex:indexPath.row];
     
-    //cell.textLabel.text = theCharacter.name;
+    cell.textLabel.text = self.currentCharacter.name;
     
         return cell;
 }
@@ -98,14 +92,16 @@
     
     
     
-    if ([segue.identifier isEqualToString:@"ProfileSgue"]) {
+    if ([segue.identifier isEqualToString:@"ProfileSegue"]) {
         
-        NSLog (@"prepare for Segue called with identifier == %@",
-               segue.identifier);
-        //This gives you a pointer to the upcoming destination 
+       
         ProfileViewController *profileController = (ProfileViewController *)segue.destinationViewController;
         
-        //profileController.theCharacter
+        profileController.theCharacter = self.currentCharacter;
+        
+        [self performSegueWithIdentifier:@"ProfileSegue" sender:nil];
+        
+        
         
     }
 }

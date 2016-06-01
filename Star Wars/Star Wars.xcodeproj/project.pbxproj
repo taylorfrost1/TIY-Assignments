@@ -68,10 +68,10 @@
 				34B4D53A1CFE1DEE00305AFC /* AppDelegate.m */,
 				34B4D53C1CFE1DEE00305AFC /* ViewController.h */,
 				34B4D53D1CFE1DEE00305AFC /* ViewController.m */,
-				34B4D5501CFE3C6200305AFC /* ProfileViewController.h */,
-				34B4D5511CFE3C6200305AFC /* ProfileViewController.m */,
 				34B4D54D1CFE29F700305AFC /* StarWarsCharacter.h */,
 				34B4D54E1CFE29F700305AFC /* StarWarsCharacter.m */,
+				34B4D5501CFE3C6200305AFC /* ProfileViewController.h */,
+				34B4D5511CFE3C6200305AFC /* ProfileViewController.m */,
 				34B4D53F1CFE1DEE00305AFC /* Main.storyboard */,
 				34B4D5421CFE1DEE00305AFC /* Assets.xcassets */,
 				34B4D5441CFE1DEE00305AFC /* LaunchScreen.storyboard */,
@@ -312,6 +312,7 @@
 				34B4D54C1CFE1DEE00305AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

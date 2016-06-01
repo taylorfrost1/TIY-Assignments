@@ -1,17 +1,14 @@
 //
-//  StarWarsCharacters.h
-//  Star Wars
+//  StarWarsCharacter.h
+//  StarWars2
 //
-//  Created by Taylor Frost on 5/31/16.
+//  Created by Taylor Frost on 6/1/16.
 //  Copyright © 2016 FrostEnterprises. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface StarWarsCharacter : NSObject
-
--(instancetype)initWithName:(NSString*) name spaceship:(NSString *) spaceship;
-
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *spaceship;
 

@@ -8,18 +8,27 @@
 
 #import "StarWarsCharacter.h"
 
-@interface StarWarsCharacter ()
-
-@end
-
 @implementation StarWarsCharacter
 
+-(instancetype)initWithName:(NSString *)n spaceship:(NSString *)s {
     
-    
-    
-    
-
-
-
+    if (self = [super init] ) {
+        self.name = n;
+        self.spaceship = s;
+    }
+    return self;
+}
 
 @end
+
+
+
+    
+    
+    
+    
+
+
+
+
+

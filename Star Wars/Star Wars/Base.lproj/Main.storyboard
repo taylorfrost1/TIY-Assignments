@@ -46,6 +46,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VEF-g0-z24"/>
                     <connections>
+                        <outlet property="tableView" destination="Gx2-EX-RdM" id="nyg-1T-8Cj"/>
                         <segue destination="Vvz-wH-0dG" kind="show" identifier="ProfileSegue" id="yWy-Mw-NAQ"/>
                     </connections>
                 </viewController>
@@ -82,8 +83,32 @@
                     <view key="view" contentMode="scaleToFill" id="vE8-GJ-y0R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ud-hc-L9Q">
+                                <rect key="frame" x="213" y="140" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the Space Ship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2BF-Oe-4k8">
+                                <rect key="frame" x="208" y="204" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Ud-hc-L9Q" firstAttribute="top" secondItem="QW5-dD-NAh" secondAttribute="bottom" constant="76" id="PYu-3o-fHe"/>
+                            <constraint firstItem="9Ud-hc-L9Q" firstAttribute="centerX" secondItem="vE8-GJ-y0R" secondAttribute="centerX" id="Yfv-mq-rjj"/>
+                            <constraint firstItem="2BF-Oe-4k8" firstAttribute="centerX" secondItem="vE8-GJ-y0R" secondAttribute="centerX" id="eth-hc-5Le"/>
+                            <constraint firstItem="2BF-Oe-4k8" firstAttribute="top" secondItem="9Ud-hc-L9Q" secondAttribute="bottom" constant="43" id="jXk-QH-SC3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="9Ud-hc-L9Q" id="b8V-gu-OR6"/>
+                        <outlet property="spaceShipLabel" destination="2BF-Oe-4k8" id="n7F-Qd-RqS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbo-fq-raf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

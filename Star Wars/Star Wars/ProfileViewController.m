@@ -7,25 +7,29 @@
 //
 
 #import "ProfileViewController.h"
-#import "StarWarsCharacter.h"
+
 
 @interface ProfileViewController ()
-
-@property (strong, nonatomic) StarWarsCharacter *theCharacter;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *spaceShipLabel;
 
 @end
 
 @implementation ProfileViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    self.nameLabel.text = self.theCharacter.name;
+    self.spaceShipLabel.text = self.theCharacter.spaceship;
+   
+    
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+    
+
+
+
 
 
 @end
