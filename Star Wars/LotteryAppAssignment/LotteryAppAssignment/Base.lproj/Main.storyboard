@@ -60,7 +60,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-8s-pj6">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-8s-pj6">
                                 <rect key="frame" x="140" y="184" width="320" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="GcA-dx-SN5" id="sFa-SD-86e"/>

@@ -56,6 +56,26 @@
     return [NSString stringWithFormat:@"%i %i %i %i %i %i", firstNumber, secondNumber, thirdNumber, fourthNumber,fifthNumber, sixthNumber];
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.ticketsArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TicketCell" forIndexPath:indexPath];
+    
+    Ticket *theTicket = [self.ticketsArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = theTicket.lottoTicketString;
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
 
 #pragma mark - IBAction Outlets
 
@@ -70,6 +90,7 @@
     [self.tableView reloadData];
     
 }
+
 
 - (IBAction)checkTicketTapped:(UIBarButtonItem *)sender {
     
@@ -87,5 +108,7 @@
     
     controller.theWinningTicket = self.winningTicket;
 }
+
+
 
 @end
