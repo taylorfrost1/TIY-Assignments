@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) NSMutableArray *charactersArray;
+@property (strong, nonatomic) characterClass *currentCharacter;
 
 @end
 
@@ -36,6 +37,36 @@
     characterClass *pepper = [[characterClass alloc] init];
     pepper.name = @"Pepper Frost";
     pepper.spaceship = @"Sun Ship 3";
+    
+    [self.charactersArray addObject:pepper];
+    
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [self.charactersArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
+(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    characterClass *theCharacter = [self.charactersArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = theCharacter.name;
+    
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"I clicked on row %ld", indexPath.row);
+    
+    self.currentCharacter = [self.charactersArray objectAtIndex:indexPath.row];
+    
+    
+    [self performSegueWithIdentifier:@"ProfileSegue" sender: nil];
     
     
 }

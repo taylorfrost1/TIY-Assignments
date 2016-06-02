@@ -66,10 +66,8 @@
 			children = (
 				34B4D5391CFE1DEE00305AFC /* AppDelegate.h */,
 				34B4D53A1CFE1DEE00305AFC /* AppDelegate.m */,
-				34B4D53C1CFE1DEE00305AFC /* ViewController.h */,
-				34B4D53D1CFE1DEE00305AFC /* ViewController.m */,
-				34B4D54D1CFE29F700305AFC /* StarWarsCharacter.h */,
-				34B4D54E1CFE29F700305AFC /* StarWarsCharacter.m */,
+				34F650581CFF660F0073DC42 /* Controllers */,
+				34F650591CFF66290073DC42 /* Modals */,
 				34B4D5501CFE3C6200305AFC /* ProfileViewController.h */,
 				34B4D5511CFE3C6200305AFC /* ProfileViewController.m */,
 				34B4D53F1CFE1DEE00305AFC /* Main.storyboard */,
@@ -87,6 +85,24 @@
 				34B4D5371CFE1DEE00305AFC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34F650581CFF660F0073DC42 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34B4D53C1CFE1DEE00305AFC /* ViewController.h */,
+				34B4D53D1CFE1DEE00305AFC /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		34F650591CFF66290073DC42 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				34B4D54D1CFE29F700305AFC /* StarWarsCharacter.h */,
+				34B4D54E1CFE29F700305AFC /* StarWarsCharacter.m */,
+			);
+			name = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
