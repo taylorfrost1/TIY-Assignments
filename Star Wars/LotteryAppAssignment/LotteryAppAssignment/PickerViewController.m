@@ -46,6 +46,8 @@
     
     NSLog(@"I selected %ld in component %ld", row, component);
     
+    NSLog(@"The value of row %ld ==")
+    
 }
 
 
