@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ticket.h"
 
 @interface PickerViewController : UIViewController
-
+@property (strong, nonatomic) Ticket *theWinningTicket;
 @end
