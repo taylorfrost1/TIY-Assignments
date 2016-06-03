@@ -102,7 +102,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *) segue sender: (id) sender {
     
-    NSLog(@"prepareForSegue called @%", segue.identifier);
+    NSLog(@"prepareForSegue called %@", segue.identifier);
     
     PickerViewController *controller = segue.destinationViewController;
     
