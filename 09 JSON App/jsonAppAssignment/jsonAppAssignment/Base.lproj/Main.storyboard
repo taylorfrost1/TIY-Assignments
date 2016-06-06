@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EuG-HY-xeU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="wIG-cS-pvl">
+            <objects>
+                <tableViewController id="wFB-VT-0K2" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="yeah" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oox-uU-pbx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="6bW-Fq-EiR" userLabel="Cell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6bW-Fq-EiR" id="Os7-qu-50u">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wFB-VT-0K2" id="olz-WX-ISH"/>
+                            <outlet property="delegate" destination="wFB-VT-0K2" id="FJr-89-bFB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9ZP-5e-uDf"/>
+                    <connections>
+                        <outlet property="tableView1" destination="Oox-uU-pbx" id="Vsh-VR-iV0"/>
+                        <segue destination="50P-2v-Hw7" kind="show" identifier="movieSegue" id="dsN-Qj-Nya"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ca-bb-hjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="608"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="6VR-LZ-PrY">
+            <objects>
+                <viewController id="50P-2v-Hw7" customClass="MovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DqG-W3-1Am"/>
+                        <viewControllerLayoutGuide type="bottom" id="1gI-Yd-8ht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="no" id="Xpe-4A-a8E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JV7-NV-lF6">
+                                <rect key="frame" x="175" y="114" width="250" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="FaU-2b-2eF"/>
+                                    <constraint firstAttribute="width" constant="250" id="dEP-zJ-E7U"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-gD-u0J">
+                                <rect key="frame" x="243" y="450" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JV7-NV-lF6" firstAttribute="centerX" secondItem="Xpe-4A-a8E" secondAttribute="centerX" id="4LO-yx-cm4"/>
+                            <constraint firstItem="JV7-NV-lF6" firstAttribute="top" secondItem="DqG-W3-1Am" secondAttribute="bottom" constant="50" id="GTk-Y3-IYw"/>
+                            <constraint firstItem="AEZ-gD-u0J" firstAttribute="centerX" secondItem="Xpe-4A-a8E" secondAttribute="centerX" id="ush-ml-oHM"/>
+                            <constraint firstItem="AEZ-gD-u0J" firstAttribute="top" secondItem="JV7-NV-lF6" secondAttribute="bottom" constant="36" id="vsW-oj-uJ7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameOfMovieLabel" destination="AEZ-gD-u0J" id="hWA-ce-fWq"/>
+                        <outlet property="posterImageView" destination="JV7-NV-lF6" id="MgK-Tk-UpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPS-K9-k3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="608"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7cS-0B-hq9">
+            <objects>
+                <navigationController storyboardIdentifier="coolestAppEver" automaticallyAdjustsScrollViewInsets="NO" id="EuG-HY-xeU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyj-Jr-S1v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wFB-VT-0K2" kind="relationship" relationship="rootViewController" id="Z1N-oC-Bvj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDb-7H-16P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277" y="608"/>
+        </scene>
+    </scenes>
+</document>
