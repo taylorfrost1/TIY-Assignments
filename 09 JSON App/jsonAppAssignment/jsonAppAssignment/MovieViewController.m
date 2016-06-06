@@ -18,12 +18,16 @@
 
 @implementation MovieViewController
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    if(self.theMovie != nil) {
+        
     self.nameOfMovieLabel.text = self.theMovie.originalTitle;
     
     NSLog(@"test for movie title generation");
+        
+//   UIImage *theImage = [self imageFromURLString: self.theMovie]
     
     
     
@@ -33,5 +37,5 @@
     
 
 
-
+}
 @end
