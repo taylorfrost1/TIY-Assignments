@@ -1,0 +1,43 @@
+{
+	"results": [{
+		"characterName": "Indiana Jones",
+		"weaponChoice": "Whip",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Satipo",
+		"weaponChoice": "Gun",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Jock Lindsey",
+		"weaponChoice": "Handgun",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Barranca",
+		"weaponChoice": "Handgun",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Rene Bellog",
+		"weaponChoice": "Rifle",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Marcus Brody",
+		"weaponChoice": "Not Applicable",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Marian Ravenwood",
+		"weaponChoice": "Knife",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Arnold Toht",
+		"weaponChoice": "Gun",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Sallah",
+		"weaponChoice": "Knife",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}, {
+		"characterName": "Cairo Swordsman",
+		"weaponChoice": "Gun",
+		"firstMovieAppearance": "Raiders of the Last Ark"
+	}]
+}
