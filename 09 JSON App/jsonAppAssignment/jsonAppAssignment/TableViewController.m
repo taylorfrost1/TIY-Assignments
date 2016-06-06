@@ -14,7 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView1;
 @property (nonatomic, strong) NSMutableArray *moviesArray;
 @property (nonatomic, strong) Modal *modalObject;
-@property (nonatomic, strong) UIImage *posterImage;
+@property (nonatomic, strong) UIImage *theImage;
 @end
 
 @implementation TableViewController
@@ -26,7 +26,7 @@
     
     [self loadJSONFile];
     
-    self.posterImage = [[UIImage alloc] init];
+    self.theImage = [[UIImage alloc] init];
    
     
 }
@@ -148,19 +148,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     self.modalObject = [self.moviesArray objectAtIndex:indexPath.row];
+    self.theImage = [self imageFromURLString:self.modalObject.posterPath];
     
     cell.textLabel.text = self.modalObject.originalTitle;
     
-   [self imageFromURLString:posterImage];
-    
-    cell.imageView.image = posterImage;
+    cell.imageView.image = self.theImage;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.moviesArray objectAtIndex:indexPath.row];
+    self.modalObject = [self.moviesArray objectAtIndex:indexPath.row];
+    self.theImage = [self imageFromURLString:self.modalObject.posterPath];
     
     [self performSegueWithIdentifier:@"movieSegue" sender:nil];
     
@@ -170,7 +170,13 @@
     
     MovieViewController *profileController = (MovieViewController *)segue.destinationViewController;
     
+    
     profileController.theMovie = self.modalObject;
+    
+    //There needs to be something here to pass the image over
+    
+    
+    
 }
 
 @end

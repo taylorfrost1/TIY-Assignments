@@ -25,9 +25,6 @@
     
     NSLog(@"test for movie title generation");
     
-    //This line could very well be wrong
-//self.posterImageView.image = [UIImage imageNamed:@"imageFromURLString"];
-    
     
     
 }

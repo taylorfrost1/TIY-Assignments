@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Modal.h"
+#import "TableViewController.h"
 
 @interface MovieViewController : UIViewController
 
 @property (nonatomic, strong) Modal *theMovie;
+@property (nonatomic, strong) UIImage *image;
 
 @end
