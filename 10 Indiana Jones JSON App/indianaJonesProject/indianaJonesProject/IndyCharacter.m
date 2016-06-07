@@ -10,4 +10,15 @@
 
 @implementation IndyCharacter
 
+-(instancetype)initWithDictionary:(NSDictionary *)dict {
+    if (self = [super init]){
+        self.characterName = [dict objectForKey:@"characterName"];
+        self.weaponChoice = [dict objectForKey:@"weaponChoice"];
+        self.firstMovieAppearance = [dict objectForKey:@"firstMovieAppearance"];
+    }
+    return self;
+}
+
+
+
 @end
